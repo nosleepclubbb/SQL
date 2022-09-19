@@ -1,0 +1,32 @@
+--Create a store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, items TEXT, quantity INTEGER, category TEXT, price INTEGER, origin TEXT);
+
+INSERT INTO store VALUES (1, "t-shirt", 100, "clothes", 11, "china");
+INSERT INTO store VALUES (2, "hat", 200, "clothes", 22, "china");
+INSERT INTO store VALUES (3, "dress", 100, "clothes", 44, "france");
+INSERT INTO store VALUES (4, "flowers", 60, "plants", 5, "usa");
+INSERT INTO store VALUES (5, "mirors", 50, "decor", 100, "china");
+INSERT INTO store VALUES (6, "pictures", 100, "decor", 10, "usa");
+INSERT INTO store VALUES (7, "mascara", 60, "make_up", 11, "italy");
+INSERT INTO store VALUES (8, "lipstick", 70, "make_up", 20, "italy");
+INSERT INTO store VALUES (9, "powder", 80, "make_up", 20, "italy");
+INSERT INTO store VALUES (10, "blush", 90, "make_up", 10, "italy");
+INSERT INTO store VALUES (11, "jacket", 100, "clothes", 100, "china");
+INSERT INTO store VALUES (12, "socks", 200, "clothes", 10, "france");
+INSERT INTO store VALUES (13, "sweater", 300, "clothes", 20, "england");
+INSERT INTO store VALUES (14, "pants", 700, "clothes", 50, "russia");
+INSERT INTO store VALUES (15, "pillow", 800, "decor", 20, "france");
+INSERT INTO store VALUES (16, "bottle", 90, "food", 1, "usa");
+
+-- Display the store database
+SELECT * FROM store;
+
+--Display the store database order by price from the most expensive item
+SELECT items, price FROM store ORDER BY price DESC;
+
+-- Display the store database order with origin country
+SELECT items, origin FROM store ORDER BY origin;
+
+-- how many stock of items there in the store?
+SELECT SUM(quantity) FROM store; 
